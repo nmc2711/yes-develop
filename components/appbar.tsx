@@ -19,7 +19,7 @@ const Appbar = () => {
 				<div className='mx-auto flex h-20 max-w-screen-md items-center justify-between px-6'>
 					<Link href='/'>
 						<a>
-							<h1 className='font-medium'>Yes, Development</h1>
+							<h1 className='text-xl font-medium'>Yes, Development</h1>
 						</a>
 					</Link>
 
@@ -40,13 +40,6 @@ const Appbar = () => {
 									</Link>
 								))}
 							</div>
-						</div>
-
-						<div
-							title='황상한'
-							className='h-10 w-10 rounded-full bg-zinc-200 bg-cover bg-center shadow-inner dark:bg-zinc-800'
-						>
-							<Image src={profile} alt="프로필 이미지" style={{ borderRadius: '50%' }} />
 						</div>
 					</nav>
 				</div>
