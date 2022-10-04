@@ -19,7 +19,7 @@ const Index = () => (
 					  유용한 지식과 코드들을 공유 해보고자 합니다. 
 					</span>{' '}
 				</p>
-				<div className='absolute top-[38%] -right-[16%] w-[72%] z-[-1] opacity-50'>
+				<div className='absolute top-[34%] -right-[16%] w-[85%] z-[-1] opacity-50'>
 				  <Image src={profile} alt="프로필 이미지" style={{ borderRadius: '50%' }} />
 				</div>
 				<br />
