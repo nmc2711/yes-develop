@@ -1,5 +1,5 @@
 {
-	"name": "next-pwa-template",
+	"name": "yes-devlopment",
 	"version": "0.0.0",
 	"license": "MIT",
 	"scripts": {
@@ -9,6 +9,7 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"12": "^1.0.2",
 		"next": "12.1.6",
 		"next-pwa": "^5.5.2",
 		"next-themes": "^0.2.0",
