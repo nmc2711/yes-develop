@@ -11,7 +11,7 @@ const Page = ({ title, children }: Props) => (
 	<>
 		{title ? (
 			<Head>
-				<title>Rice Bowl | {title}</title>
+				<title>Yes development | {title}</title>
 			</Head>
 		) : null}
 
