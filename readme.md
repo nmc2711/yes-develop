@@ -4,3 +4,11 @@
 </p>
 
 <p align="center">프론트엔드 개발의 지식을 공유한다.</p>
+
+next js
+
+typescript
+
+graph Ql
+
+pwa
