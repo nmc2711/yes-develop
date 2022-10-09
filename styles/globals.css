@@ -10,3 +10,15 @@ body {
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
 }
+
+.article {
+}
+
+.article h1 {
+	margin-bottom: 20px;
+	font-size: 28px;
+}
+
+.article p {
+	margin: 24px 0;
+}

@@ -19,16 +19,9 @@ interface Props {
 export default function ArticleDetail({ data }: Props) {
 	return (
 		<Page>
-			<Section>
-				<h2 className='text-xl font-semibold'>아티클</h2>
-
-				<div className='mt-2'>
-					<p className='text-zinc-600 dark:text-zinc-400'></p>
-				</div>
-			</Section>
-
-			<Section>
+			<Section mt={1}>
 				<div
+					className='article'
 					dangerouslySetInnerHTML={{ __html: data.posts[0].content.html }}
 				></div>
 			</Section>
