@@ -1,12 +1,9 @@
 import Page from '@/components/page'
 import Section from '@/components/section'
-import Image from 'next/image'
 
 import { GraphQLClient, gql } from 'graphql-request'
 
-const graphcms = new GraphQLClient(
-	'https://api-ap-northeast-1.hygraph.com/v2/cl8zbbyjl0vib01tcglp1asau/master'
-)
+const graphcms = new GraphQLClient(process.env.NEXT_PUBLIC_QL_URL as string)
 
 const Query = gql`
 	{
@@ -24,6 +21,22 @@ const Query = gql`
 		}
 	}
 `
+interface ArticlesType {
+	publishedAt: string
+	title: string
+	summary: string
+	updatedAt: string
+	content: {
+		html: any
+	}
+	coverPhoto: {
+		url: string
+	}
+}
+
+interface Props {
+	posts: ArticlesType[]
+}
 
 export async function getStaticProps() {
 	const { posts } = await graphcms.request(Query)
@@ -35,12 +48,12 @@ export async function getStaticProps() {
 	}
 }
 
-export default function Recipes({ posts }: any) {
-	console.log(posts)
+export default function Recipes(props: Props) {
+	const { posts } = props
 	return (
 		<Page>
 			<Section>
-				<h2 className='text-xl font-semibold'>Components</h2>
+				<h2 className='text-xl font-semibold'>아티클</h2>
 
 				<div className='mt-2'>
 					<p className='text-zinc-600 dark:text-zinc-400'></p>
@@ -51,12 +64,13 @@ export default function Recipes({ posts }: any) {
 				<h3 className='font-medium'>그랲ql 글 테스트</h3>
 
 				<ul className='list-disc space-y-2 px-6 py-2'>
-					{posts.map((item: any, key: any) => {
-						console.log(item)
+					{posts.map((item) => {
+						const { title, summary, coverPhoto } = item
 						return (
-							<li key={key}>
-								{item.summary}
-								<img src={item.coverPhoto.url} />
+							<li key={title}>
+								{title}
+								{summary}
+								<img src={coverPhoto.url} alt={title} />
 							</li>
 						)
 					})}

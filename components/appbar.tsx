@@ -4,10 +4,9 @@ import { useRouter } from 'next/router'
 
 import profile from '@/public/images/profile.jpeg'
 
-
 const links = [
 	{ label: 'Story', href: '/story' },
-	{ label: 'Recipes', href: '/recipes' },
+	{ label: 'Article', href: '/article' },
 ]
 
 const Appbar = () => {

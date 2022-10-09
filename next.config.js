@@ -9,5 +9,9 @@ const withPWA = require('next-pwa')({
 
 const nextConfig = withPWA({
 	// next config
+	env: {
+		NEXT_PUBLIC_QL_URL:
+			'https://api-ap-northeast-1.hygraph.com/v2/cl8zbbyjl0vib01tcglp1asau/master',
+	},
 })
 module.exports = nextConfig
