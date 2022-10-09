@@ -29,10 +29,6 @@ const Index = () => (
 					/>
 				</div>
 				<br />
-
-				<p className='text-sm text-zinc-600 dark:text-zinc-400'>
-					<a href='' className='underline'></a>
-				</p>
 			</div>
 		</Section>
 	</Page>
